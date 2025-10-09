@@ -5,7 +5,7 @@ public class Video
     private string VidName;
     private string VidAuthor;
     private int VidLength;
-    private List<Comment> VidComments = new List<Comment>();
+    private List<Comment> vidComments = new List<Comment>();
 
     public Video(string _VidName, string _VidAuthor, int _VidLength)
     {
@@ -14,9 +14,9 @@ public class Video
         VidLength = _VidLength;
     }
 
-    public void GetComment(Comment VidCommentaa)
+    public void GetComment(Comment vidCommentaa)
     {
-        VidComments.Add(VidCommentaa);
+        vidComments.Add(vidCommentaa);
     }
 
     public string GetVidName()
@@ -36,14 +36,15 @@ public class Video
 
     public int GetCommentNum()
     {
-        return VidComments.Count;
+        return vidComments.Count;
     }
 
     public void DisplayAll()
     {
-        foreach (Comment comments in VidComments)
+        foreach (Comment comments in vidComments)
         {
-            comments.GetComment();
+            Console.WriteLine($"{comments.GetName()}");
+            Console.WriteLine($"{comments.GetComment()}");
         }
     }
 

@@ -11,8 +11,12 @@ public class Comment
         Commenta = Commentaa;
     }
 
+    public string GetName()
+    {
+        return Name;
+    }
     public string GetComment()
     {
-        return $"{Name}\n, {Commenta}";
+        return Commenta;
     }
 }
